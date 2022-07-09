@@ -1,13 +1,12 @@
 import React from "react";
 import { TbVinyl } from "react-icons/tb";
-import { motion } from "framer-motion";
-import Link from "./NoScrollLink";
+import NoScrollLink from "./NoScrollLink";
 
 type Props = {};
 
 const Header: React.FC<Props> = (props: Props) => {
   return (
-    <div className="navbar rounded-box">
+    <div className="navbar rounded-box justify-between">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle hover:text-primary">
@@ -23,46 +22,31 @@ const Header: React.FC<Props> = (props: Props) => {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-accent">
             <li>
-              <Link href={"/"}>
+              <NoScrollLink href={"/"}>
                 <a>Home</a>
-              </Link>
+              </NoScrollLink>
             </li>
             <li>
-              <Link href={"/profile"}>
+              <NoScrollLink href={"/profile"}>
                 <a>Profile</a>
-              </Link>
+              </NoScrollLink>
             </li>
             <li>
-              <Link href={"/about"}>
+              <NoScrollLink href={"/about"}>
                 <a>About</a>
-              </Link>
+              </NoScrollLink>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-xl hover:text-primary">
-          <TbVinyl size={44} />
-        </a>
+        <NoScrollLink href={"/"}>
+          <div className="btn btn-ghost normal-case text-xl hover:text-primary">
+            <TbVinyl size={44} />
+          </div>
+        </NoScrollLink>
       </div>
-      <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle hover:text-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
-      </div>
+      <div className="navbar-end"></div>
     </div>
   );
 };

@@ -13,7 +13,14 @@ const variants = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <motion.main initial="hidden" animate="enter" exit="exit" variants={variants} transition={{ type: "linear" }}>
+    <motion.main
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      variants={variants}
+      transition={{ type: "linear" }}
+      className="w-full"
+    >
       {children}
     </motion.main>
   );

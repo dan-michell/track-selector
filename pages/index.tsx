@@ -1,10 +1,13 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
+import TextInput from "../components/TextInput";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <h1 className="text-center mt-10 text-6xl">Find some great music!</h1>
+      <div className="flex flex-col w-full items-center">
+        <TextInput />
+      </div>
     </Layout>
   );
 };
