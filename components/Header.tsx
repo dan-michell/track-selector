@@ -16,11 +16,6 @@ const Header: React.FC<Props> = (props: Props) => {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-accent">
             <li>
-              <NoScrollLink href={"/"}>
-                <a>Home</a>
-              </NoScrollLink>
-            </li>
-            <li>
               <NoScrollLink href={"/profile"}>
                 <a>Profile</a>
               </NoScrollLink>

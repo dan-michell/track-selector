@@ -18,9 +18,13 @@ const SongCard = (props: Props) => {
           height={"200px"}
         />
       </figure>
-      <div className="flex sm:flex-col items-center justify-center gap-3 w-full my-2 sm:my-0">
-        <RiPlayListAddFill size={26} />
-        <TbPlayerPlay size={34} />
+      <div className="flex sm:flex-col items-center justify-center gap-3 w-full my-2 sm:my-0 ">
+        <button>
+          <RiPlayListAddFill size={26} className="hover:text-primary" />
+        </button>
+        <button>
+          <TbPlayerPlay size={34} className="hover:text-primary" />
+        </button>
       </div>
     </div>
   );
